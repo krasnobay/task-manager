@@ -6,6 +6,7 @@ RUN echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources
 
 RUN apt-get install -y nodejs
 RUN apt-get update && apt-get install -y yarn
+RUN gem install bundler
 
 WORKDIR /task_manager
 
