@@ -1,4 +1,4 @@
-version: '2'
+version: '3'
 services:
   web:
     build: .
@@ -6,15 +6,13 @@ services:
       - db
     volumes:
       - .:/task_manager:cached
+      - bundle_cache:/bundle_cache
     ports:
       - 3000:3000
-    volumes_from:
-      - bundle_cache
     environment:
       BUNDLE_PATH: /bundle_cache
   db:
     image: postgres:10.3-alpine
+
+volumes:
   bundle_cache:
-    image: busybox
-    volumes:
-      - /bundle_cache
