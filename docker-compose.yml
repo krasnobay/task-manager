@@ -6,11 +6,10 @@ services:
       - db
     volumes:
       - .:/task_manager:cached
-      - bundle_cache:/bundle_cache
+      - bundle_cache:/usr/local/bundle
     ports:
       - 3000:3000
     environment:
-      BUNDLE_PATH: /bundle_cache
       DATABASE_HOST: db
       DATABASE_USERNAME: postgres
   db:
