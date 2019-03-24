@@ -15,4 +15,5 @@ test:
 
 production:
   <<: *default
+  database: <%= ENV['DATABASE_NAME'] || 'task_manager_production' %>
   url: <%= ENV['DATABASE_URL'] %>
