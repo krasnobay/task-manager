@@ -23,6 +23,7 @@ gem "therubyracer"
 gem "less-rails"
 gem "twitter-bootstrap-rails"
 gem "jquery-rails"
+gem 'rollbar'
 
 group :development, :test do
   gem 'byebug'
