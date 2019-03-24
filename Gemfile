@@ -26,6 +26,11 @@ gem 'slim-rails'
 gem 'therubyracer'
 gem 'twitter-bootstrap-rails'
 
+gem 'active_model_serializers'
+gem 'kaminari'
+gem 'ransack', github: 'activerecord-hackery/ransack'
+gem 'responders'
+
 group :development, :test do
   gem 'byebug'
   gem 'factory_bot_rails'
