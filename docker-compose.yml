@@ -2,16 +2,16 @@ version: '3'
 services:
   web:
     build: .
-    depends_on:
-      - db
     volumes:
-      - .:/task_manager:cached
+      - .:/app:cached
       - bundle_cache:/usr/local/bundle
     ports:
       - 3000:3000
     environment:
       DATABASE_HOST: db
       DATABASE_USERNAME: postgres
+    depends_on:
+      - db
   db:
     image: postgres:10.3-alpine
 
