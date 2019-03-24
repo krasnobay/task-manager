@@ -24,6 +24,7 @@ gem "less-rails"
 gem "twitter-bootstrap-rails"
 gem "jquery-rails"
 gem 'rollbar'
+gem 'newrelic_rpm'
 
 group :development, :test do
   gem 'byebug'
