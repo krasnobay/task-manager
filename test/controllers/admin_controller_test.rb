@@ -6,9 +6,9 @@ class Admin::UsersControllerTest < ActionDispatch::IntegrationTest
     sign_in_as admin
   end
 
-  test "should get show" do
+  test 'should get show' do
     password = generate(:string)
-    user = create(:user, {password: password})
+    user = create(:user, password: password)
     get admin_user_url(user)
     assert_response :success
   end
