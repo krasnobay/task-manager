@@ -1,10 +1,14 @@
 require 'test_helper'
 
 class Admin::UsersControllerTest < ActionDispatch::IntegrationTest
-  test 'should get show' do
-    email = generate(:string) + '@' + generate(:string)
+  setup do
+    admin = create(:admin)
+    sign_in_as admin
+  end
+
+  test "should get show" do
     password = generate(:string)
-    user = create(:user, email: email, password: password)
+    user = create(:user, {password: password})
     get admin_user_url(user)
     assert_response :success
   end
