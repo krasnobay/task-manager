@@ -13,4 +13,8 @@ class User < ApplicationRecord
 
   validates :email, uniqueness: true
   validates_format_of :email, with: /@/
+
+  def name
+    "#{first_name} #{last_name}"
+  end
 end
