@@ -12,5 +12,5 @@ class User < ApplicationRecord
   validates :last_name, length: { minimum: 2 }
 
   validates :email, uniqueness: true
-  validates_format_of  :email, :with => /@/
+  validates_format_of :email, with: /@/
 end

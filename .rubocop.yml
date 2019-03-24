@@ -8,6 +8,7 @@ AllCops:
     - 'node_modules/**/*'
     - 'tmp/**/*'
     - '**/*.haml'
+    - 'db/schema.rb'
 
 Style/FrozenStringLiteralComment:
   Enabled: false

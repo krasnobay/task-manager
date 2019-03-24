@@ -18,13 +18,13 @@ gem 'simple_form'
 gem 'state_machines'
 gem 'state_machines-activerecord'
 
-gem "slim-rails"
-gem "therubyracer"
-gem "less-rails"
-gem "twitter-bootstrap-rails"
-gem "jquery-rails"
-gem 'rollbar'
+gem 'jquery-rails'
+gem 'less-rails'
 gem 'newrelic_rpm'
+gem 'rollbar'
+gem 'slim-rails'
+gem 'therubyracer'
+gem 'twitter-bootstrap-rails'
 
 group :development, :test do
   gem 'byebug'
@@ -33,12 +33,12 @@ group :development, :test do
 end
 
 group :development do
+  gem 'awesome_print'
+  gem 'bullet'
   gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'web-console', '>= 3.3.0'
-  gem 'awesome_print'
-  gem 'bullet'
 end
 
 group :test do
