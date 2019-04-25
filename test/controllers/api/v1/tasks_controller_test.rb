@@ -26,7 +26,9 @@ class Api::V1::TasksControllerTest < ActionController::TestCase
     created_task = Task.find(data['id'])
 
     assert created_task.present?
-    assert_equal task_attributes.stringify_keys, created_task.slice(*task_attributes.keys)
+    task = task_attributes.stringify_keys
+    task['author_id'] = task['author_id'].id
+    assert_equal task, created_task.slice(*task_attributes.keys).to_hash
   end
 
   test 'should put update' do
