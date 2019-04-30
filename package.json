@@ -1,5 +1,12 @@
 {
   "name": "task_manager",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "webpacker-react": "^0.3.2"
+  },
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-plugin-react": "^7.12.4",
+    "prettier": "^1.17.0"
+  }
 }
