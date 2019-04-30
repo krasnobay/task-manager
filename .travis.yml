@@ -9,7 +9,7 @@ before_install:
   - chmod +x docker-compose
   - sudo mv docker-compose /usr/local/bin
   - docker-compose build
-  - docker-compose run --rm web /bin/sh -c "bundke install"
+  - docker-compose run --rm web /bin/sh -c "bundle install"
   - docker-compose run --rm web /bin/sh -c "yarn install"
   - docker-compose run --rm web /bin/sh -c "RAILS_ENV=test bundle exec rails db:create db:migrate"
 script:
