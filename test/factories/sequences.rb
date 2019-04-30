@@ -5,7 +5,7 @@ FactoryBot.define do
   sequence :string do |n|
     "string#{n}"
   end
-  sequence :date do |n|
-    Time.now()
+  sequence :date do |_n|
+    Time.now
   end
 end

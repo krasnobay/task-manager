@@ -7,6 +7,7 @@ SimpleCov.start
 
 class ActiveSupport::TestCase
   include FactoryBot::Syntax::Methods
+  include Concerns::AuthHelper
 end
 
 module SignInHelper
