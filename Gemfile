@@ -31,6 +31,9 @@ gem 'kaminari'
 gem 'ransack', github: 'activerecord-hackery/ransack'
 gem 'responders'
 
+gem 'webpacker', '~> 3.5'
+gem 'webpacker-react'
+
 group :development, :test do
   gem 'byebug'
   gem 'factory_bot_rails'
